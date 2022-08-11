@@ -1,7 +1,4 @@
-
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/support-ukraine.svg?t=1" />](https://supportukrainenow.org)
-
-# About
+# Filament Debugger
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/stephenjude/filament-debugger.svg?style=flat-square)](https://packagist.org/packages/stephenjude/filament-debugger)
 [![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/stephenjude/filament-debugger/run-tests?label=tests)](https://github.com/stephenjude/filament-debugger/actions?query=workflow%3Arun-tests+branch%3Amain)
@@ -9,14 +6,6 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/stephenjude/filament-debugger.svg?style=flat-square)](https://packagist.org/packages/stephenjude/filament-debugger)
 
 This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
-
-## Support us
-
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/filament-debugger.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/filament-debugger)
-
-We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
-
-We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
 
 ## Installation
 
@@ -26,38 +15,43 @@ You can install the package via composer:
 composer require stephenjude/filament-debugger
 ```
 
-You can publish and run the migrations with:
+Run the setup command using
 
 ```bash
-php artisan vendor:publish --tag="filament-debugger-migrations"
-php artisan migrate
-```
-
-You can publish the config file with:
-
-```bash
-php artisan vendor:publish --tag="filament-debugger-config"
+php artisan filament-debugger:install
 ```
 
 This is the contents of the published config file:
 
 ```php
 return [
+    'debuggers' => [
+        'horizon',
+        'telescope'
+    ],
+
+    'authorization' => false,
+
+    'permissions' => [
+        'horizon' => 'horizon.view',
+        'telescope' => 'telescope.view',
+    ],
 ];
+
 ```
+## Debuggers
+This package comes with first party Laravel packages for development and monitoring your Laravel application.
 
-Optionally, you can publish the views using
+### Laravel Telescope
+Telescope provides insight into the requests coming into your application, exceptions, log entries, database queries, queued jobs, mail, notifications, cache operations, scheduled tasks, variable dumps, and more. [Documentation](https://laravel.com/docs/9.x/telescope).
 
-```bash
-php artisan vendor:publish --tag="filament-debugger-views"
-```
-
+### Laravel Horizon
+Horizon allows you to easily monitor key metrics of your queue system such as job throughput, runtime, and job failures. [Documentation](https://laravel.com/docs/9.x/horizon).
 ## Usage
+Now you can view the installed debuggers when you log in into your filament admin panel.
 
-```php
-$filamentDebugger = new Stephenjude\FilamentDebugger();
-echo $filamentDebugger->echoPhrase('Hello, Stephenjude!');
-```
+####  Screenshots:
+
 
 ## Testing
 
