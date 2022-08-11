@@ -33,8 +33,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Stephenjude\\FilamentDebugger\\": "src",
-            "Stephenjude\\FilamentDebugger\\Database\\Factories\\": "database/factories"
+            "Stephenjude\\FilamentDebugger\\": "src"
         }
     },
     "autoload-dev": {
