@@ -41,5 +41,4 @@ class FilamentDebuggerCommand extends Command
 
         $this->info('Laravel Telescope installed.');
     }
-
 }

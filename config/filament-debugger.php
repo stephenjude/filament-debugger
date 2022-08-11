@@ -3,11 +3,10 @@
 return [
     'debuggers' => [
         'horizon',
-        'telescope'
+        'telescope',
     ],
 
     'authorization' => false,
-
 
     'permissions' => [
         'horizon' => 'horizon.view',

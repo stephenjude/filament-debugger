@@ -20,7 +20,7 @@ class FilamentDebugger extends Page
             $user = auth(config('filament.auth.guard'))->user();
 
             $debuggers = $debuggers->filter(
-                fn($value, $key) => $user->can(config("filament-debugger.permissions.$key"))
+                fn ($value, $key) => $user->can(config("filament-debugger.permissions.$key"))
             );
         }
 
