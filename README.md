@@ -64,7 +64,7 @@ We need to set authorization to `true` inside the filament debugger config if we
 protected function gate()
 {
     Gate::define('viewHorizon', function ($user) {
-        return $user->can(config('filament-debugger.permissions.horizon'));
+        return $user->can('horizon.view');
     });
 }
 
@@ -82,7 +82,7 @@ protected function authorization()
 protected function gate()
 {
     Gate::define('viewTelescope', function ($user) {
-        return $user->can(config('filament-debugger.permissions.telescope'));
+        return $user->can('telescope.view');
     });
 }
 
