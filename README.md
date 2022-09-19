@@ -50,6 +50,48 @@ Horizon allows you to easily monitor key metrics of your queue system such as jo
 ## Usage
 Now you can view the installed debuggers when you log in into your filament admin panel.
 
+## Gates & Authorization 
+When using filament debuggers (Horizon & Telescope) in production environment, we need to make sure that they are accessible to the authorized filament admin user. 
+
+To achive this, we need to use filament default authorization guard and the permissions provided in this package by overidding the `gate()` and  `authorization()` methods inside the HorizonServiceProvider and TelescopeServiceProvider respectively.
+
+### Update HorizonServiceProvider.php
+```php
+protected function gate()
+{
+    Gate::define('viewHorizon', function ($user) {
+        return $user->can(config('filament-debugger.permissions.horizon'));
+    });
+}
+
+protected function authorization()
+{
+    Auth::setDefaultDriver(config('filament.auth.guard'));
+
+    parent::authorization();
+}
+
+```
+
+### Update TelescopeServiceProvider.php
+```php
+protected function gate()
+{
+    Gate::define('viewTelescope', function ($user) {
+        return $user->can(config('filament-debugger.permissions.telescope'));
+    });
+}
+
+protected function authorization()
+{
+    Auth::setDefaultDriver(config('filament.auth.guard'));
+
+    parent::authorization();
+}
+
+```
+
+
 ####  Screenshots:
 
 
