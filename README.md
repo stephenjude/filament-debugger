@@ -56,7 +56,7 @@ When using filament debuggers (Horizon & Telescope) in production environment, w
 
 To achive this, we need to use filament default authorization guard and the permissions provided in this package by overidding the `gate()` and  `authorization()` methods inside the HorizonServiceProvider and TelescopeServiceProvider respectively.
 
-### Navigation Link Display
+### Navigation Access
 We need to set authorization to `true` inside the filament debugger config if we want to make it visible to only users with correct access in the admin panel navigation.
 
 ### Update HorizonServiceProvider.php
