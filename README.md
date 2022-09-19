@@ -50,10 +50,14 @@ Horizon allows you to easily monitor key metrics of your queue system such as jo
 ## Usage
 Now you can view the installed debuggers when you log in into your filament admin panel.
 
+
 ## Gates & Authorization 
 When using filament debuggers (Horizon & Telescope) in production environment, we need to make sure that they are accessible to the authorized filament admin user. 
 
 To achive this, we need to use filament default authorization guard and the permissions provided in this package by overidding the `gate()` and  `authorization()` methods inside the HorizonServiceProvider and TelescopeServiceProvider respectively.
+
+### Navigation Link Display
+We need to set authorization to `true` inside the filament debugger config if we want to make it visible to only users with correct access in the admin panel navigation.
 
 ### Update HorizonServiceProvider.php
 ```php
@@ -89,6 +93,23 @@ protected function authorization()
     parent::authorization();
 }
 
+```
+
+## Creating Permissions
+To make use of the permissions configured in this package we need a permission package like [Laravel Permissions](https://github.com/spatie/laravel-permission) or [Bouncer](https://github.com/JosephSilber/bouncer) which usually comes with the `Permission` Model. USe what works for you.
+
+The permissions we need to create is already defined inside the filament debugger config file.
+
+Here is an example using the Spatie Permission Package:
+
+```php
+use Spatie\Permission\Models\Permission;
+
+collect(config('filament-debugger.permissions'))
+    ->map(fn($permission) => Permission::firstOrCreate([
+        'name' => $permission,
+        'guard_name' => config('filament.auth.guard'),
+    ]));
 ```
 
 
