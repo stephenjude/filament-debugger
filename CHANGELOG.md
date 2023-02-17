@@ -2,6 +2,10 @@
 
 All notable changes to `filament-debugger` will be documented in this file.
 
+## 1.2.0 - 2023-02-17
+
+- Laravel 10 support
+
 ## 1.0.0 - 2023-02-13
 
 - completed the documentation
