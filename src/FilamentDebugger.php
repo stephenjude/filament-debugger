@@ -34,7 +34,9 @@ class FilamentDebugger extends Page
             ->icon('heroicon-o-sparkles')
             ->label('Telescope')
             ->sort(1)
-            ->url(url('telescope'))
+            ->url(
+                config('telescope.domain') . config('telescope.path')
+            )
             ->openUrlInNewTab();
     }
 
@@ -45,7 +47,9 @@ class FilamentDebugger extends Page
             ->icon('heroicon-o-globe')
             ->label('Horizon')
             ->sort(2)
-            ->url(url('horizon'))
+            ->url(
+                config('horizon.domain') . config('horizon.path')
+            )
             ->openUrlInNewTab();
     }
 }
