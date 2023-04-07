@@ -2,6 +2,10 @@
 
 All notable changes to `filament-debugger` will be documented in this file.
 
+## 1.2.1 - 2023-04-07
+
+- Use configuration instead of hard-coded values for links
+
 ## 1.2.0 - 2023-02-17
 
 - Laravel 10 support
