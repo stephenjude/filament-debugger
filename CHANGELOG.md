@@ -2,6 +2,10 @@
 
 All notable changes to `filament-debugger` will be documented in this file.
 
+## 1.2.2 - 2023-04-24
+
+- dependency update #11
+
 ## 1.2.1 - 2023-04-07
 
 - Use configuration instead of hard-coded values for links
