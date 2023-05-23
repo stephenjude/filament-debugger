@@ -2,6 +2,10 @@
 
 All notable changes to `filament-debugger` will be documented in this file.
 
+## 1.2.4 - 2023-05-23
+
+- Fixed URL bug by @mahavishnup
+
 ## 1.2.3 - 2023-04-27
 
 Fixed issue #10  by @richardtoth94
