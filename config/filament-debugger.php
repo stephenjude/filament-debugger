@@ -6,7 +6,7 @@ return [
         'telescope',
     ],
 
-    'authorization' => true,
+    'authorization' => false,
 
     'permissions' => [
         'horizon' => 'horizon.view',
