@@ -2,7 +2,6 @@
 
 namespace Stephenjude\FilamentDebugger\Traits;
 
-use Filament\Facades\Filament;
 use Filament\Navigation\NavigationItem;
 
 trait HasDebuggers
@@ -19,7 +18,7 @@ trait HasDebuggers
     public function telescope(): NavigationItem
     {
         return NavigationItem::make()
-            ->visible($this->authorized(config("filament-debugger.permissions.telescope")))
+            ->visible($this->authorized(config('filament-debugger.permissions.telescope')))
             ->group(config('filament-debugger.group'))
             ->url(url: url('telescope'), shouldOpenInNewTab: true)
             ->icon('heroicon-o-sparkles')
@@ -29,7 +28,7 @@ trait HasDebuggers
     public function horizon(): NavigationItem
     {
         return NavigationItem::make()
-            ->visible($this->authorized(config("filament-debugger.permissions.horizon")))
+            ->visible($this->authorized(config('filament-debugger.permissions.horizon')))
             ->group(config('filament-debugger.group'))
             ->icon('heroicon-o-globe-europe-africa')
             ->url(url: url('horizon'), shouldOpenInNewTab: true)

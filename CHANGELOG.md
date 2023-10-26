@@ -2,6 +2,14 @@
 
 All notable changes to `filament-debugger` will be documented in this file.
 
+## 2.0.1 - 2023-10-26
+
+- Make authorization false by default
+
+## 2.0.0 - 2023-10-26
+
+- Added support for FIlament v3
+
 ## 1.2.4 - 2023-05-23
 
 - Fixed URL bug by @mahavishnup

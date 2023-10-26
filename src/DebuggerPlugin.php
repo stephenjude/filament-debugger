@@ -44,5 +44,4 @@ class DebuggerPlugin implements Plugin
 
         return $plugin;
     }
-
 }

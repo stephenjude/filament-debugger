@@ -13,5 +13,5 @@ return [
         'telescope' => 'telescope.view',
     ],
 
-    'group' => 'Debugger'
+    'group' => 'Debugger',
 ];
