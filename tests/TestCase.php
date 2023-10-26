@@ -9,7 +9,7 @@ use Laravel\Horizon\HorizonServiceProvider;
 use Laravel\Telescope\TelescopeServiceProvider;
 use Livewire\LivewireServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Stephenjude\FilamentDebugger\FilamentDebuggerServiceProvider;
+use Stephenjude\FilamentDebugger\DebuggerServiceProvider;
 
 class TestCase extends Orchestra
 {
@@ -27,7 +27,7 @@ class TestCase extends Orchestra
             LivewireServiceProvider::class,
             TelescopeServiceProvider::class,
             HorizonServiceProvider::class,
-            FilamentDebuggerServiceProvider::class,
+            DebuggerServiceProvider::class,
         ];
     }
 

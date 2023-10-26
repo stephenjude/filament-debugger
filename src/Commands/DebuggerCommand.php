@@ -4,7 +4,7 @@ namespace Stephenjude\FilamentDebugger\Commands;
 
 use Illuminate\Console\Command;
 
-class FilamentDebuggerCommand extends Command
+class DebuggerCommand extends Command
 {
     public $signature = 'filament-debugger:install';
 

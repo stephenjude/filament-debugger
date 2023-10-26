@@ -1,6 +1,6 @@
 <?php
 
-use Stephenjude\FilamentDebugger\FilamentDebugger;
+use Stephenjude\FilamentDebugger\DebuggerPlugin;
 
 it('can install configurations', function () {
     $this->artisan('filament-debugger:install')
@@ -11,9 +11,9 @@ it('can install configurations', function () {
 });
 
 it('can open horizon', function () {
-    $this->get(FilamentDebugger::getHorizonUrl())->assertSuccessful();
+    $this->get(DebuggerPlugin::horizon())->assertSuccessful();
 });
 
 it('can open telescope', function () {
-    $this->get(FilamentDebugger::getTelescopeUrl())->assertSuccessful();
+    $this->get(DebuggerPlugin::telescope())->assertSuccessful();
 });
