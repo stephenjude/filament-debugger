@@ -5,7 +5,7 @@
 [![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/stephenjude/filament-debugger/Fix%20PHP%20code%20style%20issues?label=code%20style)](https://github.com/stephenjude/filament-debugger/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/stephenjude/filament-debugger.svg?style=flat-square)](https://packagist.org/packages/stephenjude/filament-debugger)
 
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
+Easily add Laravel Telescope and Horizon to Filament admin panel.
 
 ## Installation
 
