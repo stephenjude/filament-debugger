@@ -7,6 +7,8 @@
 
 Easily add Laravel Telescope and Horizon to Filament admin panel.
 
+![](./art/screen1.png)
+
 ## Installation
 
 You can install the package via composer:
