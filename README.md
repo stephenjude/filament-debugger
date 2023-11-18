@@ -41,6 +41,17 @@ return [
 ];
 
 ```
+
+Add the plugin to your panel plugins array
+
+```php
+$panel
+    ->plugins([
+        DebuggerPlugin::make(),
+    ]);
+```
+
+
 ## Debuggers
 This package comes with first party Laravel packages for development and monitoring your Laravel application.
 
