@@ -2,6 +2,10 @@
 
 All notable changes to `filament-debugger` will be documented in this file.
 
+## 2.0.2 - 2023-11-18
+
+- Updated readme to include registering plugin by @hcaz
+
 ## 2.0.1 - 2023-10-26
 
 - Make authorization false by default
