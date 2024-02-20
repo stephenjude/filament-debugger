@@ -14,4 +14,9 @@ return [
     ],
 
     'group' => 'Debugger',
+
+    'url' => [
+        'horizon' => env('HORIZON_PATH', 'horizon'),
+        'telescope' => env('TELESCOPE_PATH', 'telescope'),
+    ],
 ];
