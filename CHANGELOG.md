@@ -2,6 +2,10 @@
 
 All notable changes to `filament-debugger` will be documented in this file.
 
+## 2.0.3 - 2024-02-21
+
+- Configurable debugger URLs #23 by @Heyian
+
 ## 2.0.2 - 2023-11-18
 
 - Updated readme to include registering plugin by @hcaz
