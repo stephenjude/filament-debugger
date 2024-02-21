@@ -20,7 +20,7 @@ trait HasDebuggers
         return NavigationItem::make()
             ->visible($this->authorized(config('filament-debugger.permissions.telescope')))
             ->group(config('filament-debugger.group'))
-            ->url(url: url('telescope'), shouldOpenInNewTab: true)
+            ->url(url: url()->to(config('filament-debugger.url.telescope')), shouldOpenInNewTab: true)
             ->icon('heroicon-o-sparkles')
             ->label('Telescope');
     }
@@ -31,7 +31,7 @@ trait HasDebuggers
             ->visible($this->authorized(config('filament-debugger.permissions.horizon')))
             ->group(config('filament-debugger.group'))
             ->icon('heroicon-o-globe-europe-africa')
-            ->url(url: url('horizon'), shouldOpenInNewTab: true)
+            ->url(url: url()->to(config('filament-debugger.url.horizon')), shouldOpenInNewTab: true)
             ->label('Horizon');
     }
 }
