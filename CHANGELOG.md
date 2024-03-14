@@ -2,6 +2,10 @@
 
 All notable changes to `filament-debugger` will be documented in this file.
 
+## 3.0.0 - 2024-03-14
+
+- Laravel 11 support by @arnor01
+
 ## 2.0.3 - 2024-02-21
 
 - Configurable debugger URLs #23 by @Heyian
