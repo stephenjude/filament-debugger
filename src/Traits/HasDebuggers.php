@@ -6,7 +6,7 @@ use Filament\Navigation\NavigationItem;
 
 trait HasDebuggers
 {
-    private function authorized(string $ability): bool
+    private static function authorized(string $ability): bool
     {
         if (config('filament-debugger.authorization')) {
             return (bool) auth(config('filament.auth.guard'))->user()?->can($ability);
@@ -15,20 +15,20 @@ trait HasDebuggers
         return true;
     }
 
-    public function telescope(): NavigationItem
+    public static function telescope(): NavigationItem
     {
         return NavigationItem::make()
-            ->visible($this->authorized(config('filament-debugger.permissions.telescope')))
+            ->visible(self::authorized(config('filament-debugger.permissions.telescope')))
             ->group(config('filament-debugger.group'))
             ->url(url: url()->to(config('filament-debugger.url.telescope')), shouldOpenInNewTab: true)
             ->icon('heroicon-o-sparkles')
             ->label('Telescope');
     }
 
-    public function horizon(): NavigationItem
+    public static function horizon(): NavigationItem
     {
         return NavigationItem::make()
-            ->visible($this->authorized(config('filament-debugger.permissions.horizon')))
+            ->visible(self::authorized(config('filament-debugger.permissions.horizon')))
             ->group(config('filament-debugger.group'))
             ->icon('heroicon-o-globe-europe-africa')
             ->url(url: url()->to(config('filament-debugger.url.horizon')), shouldOpenInNewTab: true)
