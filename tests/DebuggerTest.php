@@ -1,7 +1,7 @@
 <?php
 
-use Stephenjude\FilamentDebugger\DebuggerPlugin;
 use Filament\Navigation\NavigationItem;
+use Stephenjude\FilamentDebugger\DebuggerPlugin;
 
 it('can install configurations', function () {
     $this->artisan('filament-debugger:install')
