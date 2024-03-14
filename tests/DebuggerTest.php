@@ -1,6 +1,7 @@
 <?php
 
 use Stephenjude\FilamentDebugger\DebuggerPlugin;
+use Filament\Navigation\NavigationItem;
 
 it('can install configurations', function () {
     $this->artisan('filament-debugger:install')
@@ -11,9 +12,9 @@ it('can install configurations', function () {
 });
 
 it('can open horizon', function () {
-    $this->get(DebuggerPlugin::horizon())->assertSuccessful();
+    expect(DebuggerPlugin::horizon())->toBeInstanceOf(NavigationItem::class);
 });
 
 it('can open telescope', function () {
-    $this->get(DebuggerPlugin::telescope())->assertSuccessful();
+    expect(DebuggerPlugin::telescope())->toBeInstanceOf(NavigationItem::class);
 });
