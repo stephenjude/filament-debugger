@@ -34,4 +34,14 @@ trait HasDebuggers
             ->url(url: url()->to(config('filament-debugger.url.horizon')), shouldOpenInNewTab: true)
             ->label('Horizon');
     }
+
+    public static function pulse(): NavigationItem
+    {
+        return NavigationItem::make()
+            ->visible(self::authorized(config('filament-debugger.permissions.pulse')))
+            ->group(config('filament-debugger.group'))
+            ->icon('heroicon-o-arrow-trending-up')
+            ->url(url: url()->to(config('filament-debugger.url.pulse')), shouldOpenInNewTab: true)
+            ->label('Pulse');
+    }
 }

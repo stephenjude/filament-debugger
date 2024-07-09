@@ -25,6 +25,7 @@ class DebuggerPlugin implements Plugin
             collect([
                 'horizon' => $this->horizon(),
                 'telescope' => $this->telescope(),
+                'pulse' => $this->pulse(),
             ])
                 ->only(config('filament-debugger.debuggers'))
                 ->values()
