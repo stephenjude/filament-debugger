@@ -11,9 +11,9 @@ it('can install configurations', function () {
 });
 
 it('can open horizon', function () {
-    $this->get(DebuggerPlugin::horizon())->assertSuccessful();
+    $this->get(DebuggerPlugin::horizonNavigation())->assertSuccessful();
 });
 
 it('can open telescope', function () {
-    $this->get(DebuggerPlugin::telescope())->assertSuccessful();
+    $this->get(DebuggerPlugin::telescopeNavigation())->assertSuccessful();
 });
