@@ -1,3 +1,5 @@
+![](https://raw.githubusercontent.com/stephenjude/filament-debugger/main/art/banner.jpg)
+
 # Filament Debugger
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/stephenjude/filament-debugger.svg?style=flat-square)](https://packagist.org/packages/stephenjude/filament-debugger)
@@ -7,7 +9,7 @@
 
 Easily add Laravel Telescope and Horizon to Filament admin panel.
 
-![](./art/screen1.png)
+![](https://raw.githubusercontent.com/stephenjude/filament-debugger/main/art/screen1.png)
 
 ## Installation
 
