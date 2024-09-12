@@ -10,7 +10,7 @@ trait HasTelescope
 {
     use EvaluatesClosures;
 
-    public Closure|bool $hasTelescope = true;
+    public Closure | bool $hasTelescope = true;
 
     public string $telescopeLabel;
 
@@ -18,9 +18,10 @@ trait HasTelescope
 
     public string $telescopeUrl;
 
-    public Closure|bool $telescopeOpenInNewTab = true;
+    public Closure | bool $telescopeOpenInNewTab = true;
 
-    public function telescopeNavigation(Closure|bool $condition = true, string $label = 'Telescope', string $icon = 'heroicon-o-sparkles', string $url = 'telescope', Closure|bool $openInNewTab = true): static {
+    public function telescopeNavigation(Closure | bool $condition = true, string $label = 'Telescope', string $icon = 'heroicon-o-sparkles', string $url = 'telescope', Closure | bool $openInNewTab = true): static
+    {
         $this->hasTelescope = $condition;
 
         $this->telescopeLabel = $label;
@@ -55,7 +56,7 @@ trait HasTelescope
 
     public function getTelescopeOpenInNewTab(): bool
     {
-        return  $this->evaluate($this->telescopeOpenInNewTab) === true;
+        return $this->evaluate($this->telescopeOpenInNewTab) === true;
     }
 
     public function getTelescopeIcon(): string

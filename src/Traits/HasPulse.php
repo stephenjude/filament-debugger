@@ -10,7 +10,7 @@ trait HasPulse
 {
     use EvaluatesClosures;
 
-    public Closure|bool $hasPulse = true;
+    public Closure | bool $hasPulse = true;
 
     public string $pulseLabel;
 
@@ -18,14 +18,14 @@ trait HasPulse
 
     public string $pulseUrl;
 
-    public Closure|bool $pulseOpenInNewTab = true;
+    public Closure | bool $pulseOpenInNewTab = true;
 
     public function pulseNavigation(
-        Closure|bool $condition = true,
+        Closure | bool $condition = true,
         string $label = 'Pulse',
         string $icon = 'heroicon-o-bolt',
         string $url = 'pulse',
-        Closure|bool $openInNewTab = true
+        Closure | bool $openInNewTab = true
     ): static {
         $this->hasPulse = $condition;
 
@@ -42,7 +42,7 @@ trait HasPulse
 
     public function hasPulse(): bool
     {
-        return $this->evaluate($this->hasPulse ?? false)  === true;
+        return $this->evaluate($this->hasPulse ?? false) === true;
     }
 
     private function getPulseNavigation(): NavigationItem

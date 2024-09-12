@@ -20,7 +20,8 @@ trait HasHorizon
 
     public Closure | bool $horizonOpenInNewTab = true;
 
-    private function getHorizonNavigation(): NavigationItem {
+    private function getHorizonNavigation(): NavigationItem
+    {
         return NavigationItem::make()
             ->group($this->hasGroupNavigation() ? $this->getGroupNavigationLabel() : null)
             ->url(url: $this->getHorizonUrl(), shouldOpenInNewTab: $this->getHorizonOpenInNewTab())
@@ -28,13 +29,12 @@ trait HasHorizon
             ->label(label: $this->getHorizonLabel());
     }
 
-
     public function horizonNavigation(
-        Closure|bool $condition = true,
+        Closure | bool $condition = true,
         string $label = 'Horizon',
         string $icon = 'heroicon-o-globe-europe-africa',
         string $url = 'horizon',
-        Closure|bool $openInNewTab = true
+        Closure | bool $openInNewTab = true
     ): static {
         $this->hasHorizon = $condition;
 
@@ -49,23 +49,28 @@ trait HasHorizon
         return $this;
     }
 
-    public function hasHorizon(): bool {
+    public function hasHorizon(): bool
+    {
         return $this->evaluate($this->hasHorizon ?? false) === true;
     }
 
-    public function getHorizonIcon(): string {
+    public function getHorizonIcon(): string
+    {
         return $this->horizonIcon ?? 'heroicon-o-globe-europe-africa';
     }
 
-    public function getHorizonUrl(): string {
+    public function getHorizonUrl(): string
+    {
         return $this->horizonUrl ?? url('horizon');
     }
 
-    public function getHorizonLabel(): string {
+    public function getHorizonLabel(): string
+    {
         return $this->horizonLabel ?? 'Horizon';
     }
 
-    public function getHorizonOpenInNewTab(): bool {
+    public function getHorizonOpenInNewTab(): bool
+    {
         return $this->evaluate($this->horizonOpenInNewTab ?? true) === true;
     }
 }

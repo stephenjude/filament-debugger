@@ -5,8 +5,6 @@ namespace Stephenjude\FilamentDebugger\Tests;
 use BladeUI\Heroicons\BladeHeroiconsServiceProvider;
 use BladeUI\Icons\BladeIconsServiceProvider;
 use Filament\FilamentServiceProvider;
-use Laravel\Horizon\HorizonServiceProvider;
-use Laravel\Telescope\TelescopeServiceProvider;
 use Livewire\LivewireServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 use Stephenjude\FilamentDebugger\DebuggerServiceProvider;
