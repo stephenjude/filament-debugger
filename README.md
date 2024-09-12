@@ -36,9 +36,10 @@ You can authorize the plugin for users with a specific role/permission:
 ```php
 use Stephenjude\FilamentDebugger\DebuggerPlugin;
 
- $panel->plugin(
-    DebuggerPlugin::make()
-        ->authorize(condition:fn()=>filament()->auth()->user()->can('view.debuggers') )
+$panel->plugin(
+    DebuggerPlugin::make()->authorize(
+        condition: fn()=>filament()->auth()->user()->can('view.debuggers')
+    )
 );
  ```
 
@@ -48,9 +49,11 @@ You can customize the navigation group:
 ```php
 use Stephenjude\FilamentDebugger\DebuggerPlugin;
 
- $panel->plugin(
-    DebuggerPlugin::make()
-        ->groupNavigation(condition: true,   label: 'Debugger',)
+$panel->plugin(
+    DebuggerPlugin::make()->groupNavigation(
+        condition: true,   
+        label: 'Debugger'
+    )
 );
  ```
 
