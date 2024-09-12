@@ -11,7 +11,6 @@ trait HasAuthorization
 
     public Closure | bool $authorized = true;
 
-
     public function authorize(Closure | bool $condition = true): static
     {
         $this->authorized = $condition;

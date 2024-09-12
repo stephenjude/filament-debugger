@@ -9,11 +9,11 @@ trait HasGroup
 {
     use EvaluatesClosures;
 
-    public Closure|bool $groupNavigation = true;
+    public Closure | bool $groupNavigation = true;
 
     public string $groupNavigationLabel = 'Debuggers';
 
-    public function groupNavigation(Closure|bool $condition = true, string $label = 'Debugger'): static
+    public function groupNavigation(Closure | bool $condition = true, string $label = 'Debugger'): static
     {
         $this->groupNavigation = $condition;
 

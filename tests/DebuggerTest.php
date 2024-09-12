@@ -35,14 +35,14 @@ it('groups plugin navigation items', function () {
     $panel = filament()->getCurrentPanel()
         ->plugin(
             DebuggerPlugin::make()->groupNavigation(
-                condition: fn() => true,
+                condition: fn () => true,
                 label: 'Laravel Debuggers'
             )
         );
 
     collect($panel->getNavigationItems())
         ->each(
-            fn(NavigationItem $navigationItem) => expect($navigationItem)->getGroup()->toBe('Laravel Debuggers')
+            fn (NavigationItem $navigationItem) => expect($navigationItem)->getGroup()->toBe('Laravel Debuggers')
         );
 });
 
@@ -52,11 +52,11 @@ it('customizes telescope navigation', function () {
             ->horizonNavigation(false)
             ->pulseNavigation(false)
             ->telescopeNavigation(
-                condition: fn() => true,
+                condition: fn () => true,
                 label: 'Laravel Telescope',
                 icon: 'heroicon-o-users',
                 url: 'telescope/requests',
-                openInNewTab: fn() => false
+                openInNewTab: fn () => false
             )
     );
 
@@ -80,11 +80,11 @@ it('customizes horizon navigation', function () {
             ->telescopeNavigation(false)
             ->pulseNavigation(false)
             ->horizonNavigation(
-                condition: fn() => true,
+                condition: fn () => true,
                 label: 'Laravel Horizon',
                 icon: 'heroicon-o-users',
                 url: url('horizon/requests'),
-                openInNewTab: fn() => false
+                openInNewTab: fn () => false
             )
     );
 
@@ -108,11 +108,11 @@ it('customizes pulse navigation', function () {
             ->horizonNavigation(false)
             ->telescopeNavigation(false)
             ->pulseNavigation(
-                condition: fn() => true,
+                condition: fn () => true,
                 label: 'Laravel Pulse',
                 icon: 'heroicon-o-users',
                 url: 'pulse/requests',
-                openInNewTab: fn() => false
+                openInNewTab: fn () => false
             )
     );
 
