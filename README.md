@@ -17,38 +17,37 @@ You can install the package via composer:
 composer require stephenjude/filament-debugger
 ```
 
-Run the setup command using
+## Usages
+```php
+public function panel(Panel $panel): Panel
+{
+    use Stephenjude\FilamentDebugger\DebuggerPlugin;
 
-```bash
-php artisan filament-debugger:install
+    return $panel
+        ->plugin(
+            DebuggerPlugin::make()
+        );
+}
 ```
 
-This is the contents of the published config file:
+### Telescope
+Telescope provides insight into the requests coming into your application, exceptions, log entries, database queries, queued jobs, mail, notifications, cache operations, scheduled tasks, variable dumps, and more. [Documentation](https://laravel.com/docs/9.x/telescope).
+
+You can customize all the supported debuggers:
 
 ```php
-return [
-    'debuggers' => [
-        'horizon',
-        'telescope'
-    ],
+   use Stephenjude\FilamentDebugger\DebuggerPlugin;
 
-    'authorization' => false,
-
-    'permissions' => [
-        'horizon' => 'horizon.view',
-        'telescope' => 'telescope.view',
-    ],
-];
-
+    return $panel
+        ->plugin(
+            DebuggerPlugin::make()
+                ->telescopeNavigation(true, 'Telescope', 'heroicon-o-sparkles', 'telescope', true)
+        );
 ```
-## Debuggers
-This package comes with first party Laravel packages for development and monitoring your Laravel application.
-
-### Laravel Telescope
-Telescope provides insight into the requests coming into your application, exceptions, log entries, database queries, queued jobs, mail, notifications, cache operations, scheduled tasks, variable dumps, and more. [Documentation](https://laravel.com/docs/9.x/telescope).
 
 ### Laravel Horizon
 Horizon allows you to easily monitor key metrics of your queue system such as job throughput, runtime, and job failures. [Documentation](https://laravel.com/docs/9.x/horizon).
+
 ## Usage
 Now you can view the installed debuggers when you log in into your filament admin panel.
 

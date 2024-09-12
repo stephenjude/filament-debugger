@@ -10,6 +10,7 @@ use Laravel\Telescope\TelescopeServiceProvider;
 use Livewire\LivewireServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 use Stephenjude\FilamentDebugger\DebuggerServiceProvider;
+use Stephenjude\FilamentDebugger\Tests\Common\AdminPanelProvider;
 
 class TestCase extends Orchestra
 {
@@ -25,9 +26,8 @@ class TestCase extends Orchestra
             BladeIconsServiceProvider::class,
             FilamentServiceProvider::class,
             LivewireServiceProvider::class,
-            TelescopeServiceProvider::class,
-            HorizonServiceProvider::class,
             DebuggerServiceProvider::class,
+            AdminPanelProvider::class,
         ];
     }
 

@@ -4,7 +4,6 @@ namespace Stephenjude\FilamentDebugger;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Stephenjude\FilamentDebugger\Commands\DebuggerCommand;
 
 class DebuggerServiceProvider extends PackageServiceProvider
 {

@@ -10,7 +10,7 @@ trait HasTelescope
 {
     use EvaluatesClosures;
 
-    public Closure|bool $hasTelescope;
+    public Closure|bool $hasTelescope = true;
 
     public string $telescopeLabel;
 

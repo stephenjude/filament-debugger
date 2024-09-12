@@ -18,7 +18,7 @@ trait HasPulse
 
     public string $pulseUrl;
 
-    public Closure|bool $pulseOpenInNewTab;
+    public Closure|bool $pulseOpenInNewTab = true;
 
     public function pulseNavigation(
         Closure|bool $condition = true,

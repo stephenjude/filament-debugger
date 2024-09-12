@@ -11,7 +11,7 @@ trait HasGroup
 
     public Closure|bool $groupNavigation = true;
 
-    public string $groupNavigationLabel;
+    public string $groupNavigationLabel = 'Debuggers';
 
     public function groupNavigation(Closure|bool $condition = true, string $label = 'Debugger'): static
     {
@@ -24,11 +24,11 @@ trait HasGroup
 
     public function hasGroupNavigation(): bool
     {
-        return  $this->evaluate($this->groupNavigation ?? true) === true;
+        return $this->evaluate($this->groupNavigation) === true;
     }
 
     public function getGroupNavigationLabel(): string
     {
-        return $this->groupNavigationLabel ?? 'Debuggers';
+        return $this->groupNavigationLabel;
     }
 }

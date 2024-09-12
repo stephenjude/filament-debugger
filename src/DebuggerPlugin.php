@@ -18,22 +18,26 @@ class DebuggerPlugin implements Plugin
     use HasPulse;
     use HasTelescope;
 
-    public static function make(): static {
+    public static function make(): static
+    {
         return app(static::class);
     }
 
-    public static function get(): static {
+    public static function get(): static
+    {
         /** @var static $plugin */
         $plugin = filament(app(static::class)->getId());
 
         return $plugin;
     }
 
-    public function getId(): string {
+    public function getId(): string
+    {
         return 'filament-debugger';
     }
 
-    public function register(Panel $panel): void {
+    public function register(Panel $panel): void
+    {
         if ($this->authorized() === false) {
             return;
         }
@@ -45,6 +49,7 @@ class DebuggerPlugin implements Plugin
         ]));
     }
 
-    public function boot(Panel $panel): void {
+    public function boot(Panel $panel): void
+    {
     }
 }

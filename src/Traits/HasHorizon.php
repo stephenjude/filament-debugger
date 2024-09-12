@@ -10,7 +10,7 @@ trait HasHorizon
 {
     use EvaluatesClosures;
 
-    public Closure|bool $hasHorizon = true;
+    public Closure | bool $hasHorizon = true;
 
     public string $horizonLabel;
 
@@ -18,7 +18,7 @@ trait HasHorizon
 
     public string $horizonUrl;
 
-    public bool $horizonOpenInNewTab = true;
+    public Closure | bool $horizonOpenInNewTab = true;
 
     private function getHorizonNavigation(): NavigationItem {
         return NavigationItem::make()
