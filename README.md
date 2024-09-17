@@ -21,9 +21,10 @@ composer require stephenjude/filament-debugger
 
 ## Usages
 ```php
+use Stephenjude\FilamentDebugger\DebuggerPlugin;
+
 public function panel(Panel $panel): Panel
 {
-    use Stephenjude\FilamentDebugger\DebuggerPlugin;
 
     return $panel
         ->plugin(
