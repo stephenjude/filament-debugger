@@ -7,7 +7,7 @@
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/stephenjude/filament-debugger/fix-php-code-style-issues.yml?branch=main&label=code%20style)](https://github.com/stephenjude/filament-debugger/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/stephenjude/filament-debugger.svg?style=flat-square)](https://packagist.org/packages/stephenjude/filament-debugger)
 
-Easily add Laravel Telescope and Horizon to Filament admin panel.
+Easily add Telescope, Horizon and Laravel Pulse to Filament admin panel.
 
 ![](https://raw.githubusercontent.com/stephenjude/filament-debugger/main/art/screen1.png)
 
@@ -91,13 +91,13 @@ $panel->plugin(
 ## Gates & Authorization
 When using filament debuggers (Horizon, Telescope & Pulse) in production environment, we need to make sure that they are accessible to the authorized filament admin user.
 
-To achive this, we need to use filament default authorization guard and the permissions provided in this package by overidding the `gate()` and  `authorization()` methods inside the HorizonServiceProvider,  TelescopeServiceProvider and PulseServiceProvider respectively.
+To achive this, we need to use filament default authorization guard and your application defined permissions provided by overidding the `gate()` and  `authorization()` methods inside the HorizonServiceProvider,  TelescopeServiceProvider and PulseServiceProvider respectively.
 
 ```php
 protected function gate()
 {
     Gate::define('viewHorizon', function ($user) {
-        return $user->can(config('filament-debugger.permissions.horizon'));
+        return $user->can('view.debuggers);
     });
 }
 
