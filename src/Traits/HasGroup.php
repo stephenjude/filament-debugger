@@ -13,7 +13,7 @@ trait HasGroup
 
     public string $groupNavigationLabel = 'Debuggers';
 
-    public function groupNavigation(Closure | bool $condition = true, string $label = 'Debugger'): static
+    public function groupNavigation(Closure | bool $condition = true, string $label = 'Debuggers'): static
     {
         $this->groupNavigation = $condition;
 
