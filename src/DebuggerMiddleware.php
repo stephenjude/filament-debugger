@@ -10,7 +10,7 @@ use Stephenjude\FilamentDebugger\Traits\HasHorizon;
 use Stephenjude\FilamentDebugger\Traits\HasPulse;
 use Stephenjude\FilamentDebugger\Traits\HasTelescope;
 
-class DebuggerPlugin implements Plugin
+class DebuggerMiddleware implements Plugin
 {
     use HasAuthorization;
     use HasGroup;
@@ -42,10 +42,17 @@ class DebuggerPlugin implements Plugin
 
     public function boot(Panel $panel): void
     {
-        $panel->navigationItems([
-            $this->getHorizonNavigation(),
-            $this->getPulseNavigation(),
-            $this->getTelescopeNavigation()
+        $panel->middleware([
+
         ]);
+        if ($this->authorized() === false) {
+            return;
+        }
+
+        $panel->navigationItems(array_filter([
+            $this->hasHorizon() ? $this->getHorizonNavigation() : null,
+            $this->hasPulse() ? $this->getPulseNavigation() : null,
+            $this->hasTelescope() ? $this->getTelescopeNavigation() : null,
+        ]));
     }
 }
