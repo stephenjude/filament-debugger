@@ -38,6 +38,10 @@ class DebuggerPlugin implements Plugin
 
     public function register(Panel $panel): void
     {
+    }
+
+    public function boot(Panel $panel): void
+    {
         if ($this->authorized() === false) {
             return;
         }
@@ -48,6 +52,4 @@ class DebuggerPlugin implements Plugin
             $this->hasTelescope() ? $this->getTelescopeNavigation() : null,
         ]));
     }
-
-    public function boot(Panel $panel): void {}
 }
