@@ -10,7 +10,7 @@ trait HasHorizon
 {
     use EvaluatesClosures;
 
-    public Closure|bool $hasHorizon = true;
+    public Closure | bool $hasHorizon = true;
 
     public string $horizonLabel;
 
@@ -18,24 +18,24 @@ trait HasHorizon
 
     public string $horizonUrl;
 
-    public Closure|bool $horizonOpenInNewTab = true;
+    public Closure | bool $horizonOpenInNewTab = true;
 
     private function getHorizonNavigation(): NavigationItem
     {
         return NavigationItem::make()
-            ->visible(fn() => $this->hasHorizon() && $this->authorized() )
-            ->group(fn() => $this->hasGroupNavigation() ? $this->getGroupNavigationLabel() : null)
+            ->visible(fn () => $this->hasHorizon() && $this->authorized())
+            ->group(fn () => $this->hasGroupNavigation() ? $this->getGroupNavigationLabel() : null)
             ->url(url: $this->getHorizonUrl(), shouldOpenInNewTab: $this->getHorizonOpenInNewTab())
             ->icon(icon: $this->getHorizonIcon())
             ->label(label: $this->getHorizonLabel());
     }
 
     public function horizonNavigation(
-        Closure|bool $condition = true,
+        Closure | bool $condition = true,
         string $label = 'Horizon',
         string $icon = 'heroicon-o-globe-europe-africa',
         string $url = 'horizon',
-        Closure|bool $openInNewTab = true
+        Closure | bool $openInNewTab = true
     ): static {
         $this->hasHorizon = $condition;
 
