@@ -43,7 +43,7 @@ class DebuggerPlugin implements Plugin
         $panel->navigationItems([
             $this->getHorizonNavigation(),
             $this->getPulseNavigation(),
-            $this->getTelescopeNavigation()
+            $this->getTelescopeNavigation(),
         ]);
     }
 }

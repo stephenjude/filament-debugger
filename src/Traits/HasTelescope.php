@@ -10,7 +10,7 @@ trait HasTelescope
 {
     use EvaluatesClosures;
 
-    public Closure|bool $hasTelescope = true;
+    public Closure | bool $hasTelescope = true;
 
     public string $telescopeLabel;
 
@@ -18,14 +18,14 @@ trait HasTelescope
 
     public string $telescopeUrl;
 
-    public Closure|bool $telescopeOpenInNewTab = true;
+    public Closure | bool $telescopeOpenInNewTab = true;
 
     public function telescopeNavigation(
-        Closure|bool $condition = true,
+        Closure | bool $condition = true,
         string $label = 'Telescope',
         string $icon = 'heroicon-o-sparkles',
         string $url = 'telescope',
-        Closure|bool $openInNewTab = true
+        Closure | bool $openInNewTab = true
     ): static {
         $this->hasTelescope = $condition;
 
@@ -48,8 +48,8 @@ trait HasTelescope
     private function getTelescopeNavigation(): NavigationItem
     {
         return NavigationItem::make()
-            ->visible(fn() => $this->hasTelescope() && $this->authorized())
-            ->group(fn() => $this->hasGroupNavigation() ? $this->getGroupNavigationLabel() : null)
+            ->visible(fn () => $this->hasTelescope() && $this->authorized())
+            ->group(fn () => $this->hasGroupNavigation() ? $this->getGroupNavigationLabel() : null)
             ->url(url: $this->getTelescopeUrl(), shouldOpenInNewTab: $this->getTelescopeOpenInNewTab())
             ->icon(icon: $this->getTelescopeIcon())
             ->label(label: $this->getTelescopeLabel());
