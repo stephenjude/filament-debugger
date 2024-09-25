@@ -16,7 +16,7 @@ it('registers plugin', function () {
 
 it('groups plugin navigation items', function () {
     $plugin = DebuggerPlugin::make()
-        ->navigationGroup(condition: fn() => true, label: 'Laravel Debuggers');
+        ->navigationGroup(condition: fn () => true, label: 'Laravel Debuggers');
 
     expect($plugin)->getNavigationGroupLabel()->toBe('Laravel Debuggers');
 
@@ -28,11 +28,11 @@ it('customizes telescope navigation', function () {
         ->horizonNavigation(false)
         ->pulseNavigation(false)
         ->telescopeNavigation(
-            condition: fn() => true,
+            condition: fn () => true,
             label: 'Laravel Telescope',
             icon: 'heroicon-o-users',
             url: 'telescope/requests',
-            openInNewTab: fn() => false
+            openInNewTab: fn () => false
         );
 
     expect($plugin->hasHorizon())->toBeFalse();
@@ -55,11 +55,11 @@ it('customizes horizon navigation', function () {
         ->telescopeNavigation(false)
         ->pulseNavigation(false)
         ->horizonNavigation(
-            condition: fn() => true,
+            condition: fn () => true,
             label: 'Laravel Horizon',
             icon: 'heroicon-o-users',
             url: url('horizon/requests'),
-            openInNewTab: fn() => false
+            openInNewTab: fn () => false
         );
 
     expect($plugin->hasPulse())->toBeFalse();
@@ -82,11 +82,11 @@ it('customizes pulse navigation', function () {
         ->horizonNavigation(false)
         ->telescopeNavigation(false)
         ->pulseNavigation(
-            condition: fn() => true,
+            condition: fn () => true,
             label: 'Laravel Pulse',
             icon: 'heroicon-o-users',
             url: 'pulse/requests',
-            openInNewTab: fn() => false
+            openInNewTab: fn () => false
         );
 
     expect($plugin->hasHorizon())->toBeFalse();
