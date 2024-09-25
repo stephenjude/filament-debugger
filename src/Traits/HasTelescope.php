@@ -49,7 +49,7 @@ trait HasTelescope
     {
         return NavigationItem::make()
             ->visible(fn () => $this->hasTelescope() && $this->authorized())
-            ->group(fn () => $this->hasGroupNavigation() ? $this->getGroupNavigationLabel() : null)
+            ->group(fn () => $this->hasNavigationGroup() ? $this->getNavigationGroupLabel() : null)
             ->url(url: $this->getTelescopeUrl(), shouldOpenInNewTab: $this->getTelescopeOpenInNewTab())
             ->icon(icon: $this->getTelescopeIcon())
             ->label(label: $this->getTelescopeLabel());

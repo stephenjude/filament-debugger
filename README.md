@@ -53,7 +53,7 @@ use Stephenjude\FilamentDebugger\DebuggerPlugin;
 
 $panel->plugin(
     DebuggerPlugin::make()
-        ->groupNavigation(condition: true, label: 'Debugger')
+        ->navigationGroup(condition: true, label: 'Debugger')
 );
  ```
 

@@ -9,26 +9,26 @@ trait HasGroup
 {
     use EvaluatesClosures;
 
-    public Closure | bool $groupNavigation = true;
+    public Closure|bool $navigationGroup = true;
 
-    public string $groupNavigationLabel = 'Debuggers';
+    public string $navigationGroupLabel = 'Debuggers';
 
-    public function groupNavigation(Closure | bool $condition = true, string $label = 'Debuggers'): static
+    public function navigationGroup(Closure|bool $condition = true, string $label = 'Debuggers'): static
     {
-        $this->groupNavigation = $condition;
+        $this->navigationGroup = $condition;
 
-        $this->groupNavigationLabel = $label;
+        $this->navigationGroupLabel = $label;
 
         return $this;
     }
 
-    public function hasGroupNavigation(): bool
+    public function hasNavigationGroup(): bool
     {
-        return $this->evaluate($this->groupNavigation) === true;
+        return $this->evaluate($this->navigationGroup) === true;
     }
 
-    public function getGroupNavigationLabel(): string
+    public function getNavigationGroupLabel(): string
     {
-        return $this->groupNavigationLabel;
+        return $this->navigationGroupLabel;
     }
 }

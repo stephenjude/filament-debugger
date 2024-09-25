@@ -24,7 +24,7 @@ trait HasHorizon
     {
         return NavigationItem::make()
             ->visible(fn () => $this->hasHorizon() && $this->authorized())
-            ->group(fn () => $this->hasGroupNavigation() ? $this->getGroupNavigationLabel() : null)
+            ->group(fn () => $this->hasNavigationGroup() ? $this->getNavigationGroupLabel() : null)
             ->url(url: $this->getHorizonUrl(), shouldOpenInNewTab: $this->getHorizonOpenInNewTab())
             ->icon(icon: $this->getHorizonIcon())
             ->label(label: $this->getHorizonLabel());

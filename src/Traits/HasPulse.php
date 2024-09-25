@@ -49,7 +49,7 @@ trait HasPulse
     {
         return NavigationItem::make()
             ->visible(fn () => $this->hasPulse() && $this->authorized())
-            ->group(fn () => $this->hasGroupNavigation() ? $this->getGroupNavigationLabel() : null)
+            ->group(fn () => $this->hasNavigationGroup() ? $this->getNavigationGroupLabel() : null)
             ->url(url: $this->getPulseUrl(), shouldOpenInNewTab: $this->getPulseOpenInNewTab())
             ->icon(icon: $this->getPulseIcon())
             ->label(label: $this->getPulseLabel());
