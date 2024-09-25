@@ -2,6 +2,10 @@
 
 All notable changes to `filament-debugger` will be documented in this file.
 
+## 3.1.1 - 2024-09-22
+
+- Fixed issue #32
+
 ## 3.1.0 - 2024-09-13
 
 - Added Laravel Pulse
