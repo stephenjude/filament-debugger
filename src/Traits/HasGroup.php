@@ -22,6 +22,18 @@ trait HasGroup
         return $this;
     }
 
+    /**
+     * @deprecated since v3.1.2
+     */
+    public function groupNavigation(Closure|bool $condition = true, string $label = 'Debuggers'): static
+    {
+        $this->navigationGroup = $condition;
+
+        $this->navigationGroupLabel = $label;
+
+        return $this;
+    }
+
     public function hasNavigationGroup(): bool
     {
         return $this->evaluate($this->navigationGroup) === true;

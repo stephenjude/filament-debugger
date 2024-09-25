@@ -37,12 +37,8 @@ public function panel(Panel $panel): Panel
 You can authorize the plugin for users with a specific role/permission:
 
 ```php
-use Stephenjude\FilamentDebugger\DebuggerPlugin;
-
-$panel->plugin(
-    DebuggerPlugin::make()
-        ->authorize(condition: fn() => auth()->user()->can('view.debuggers'))
-);
+DebuggerPlugin::make()
+    ->authorize(condition: fn() => auth()->user()->can('view.debuggers'));
  ```
 
 ### Custom Navigation Group
