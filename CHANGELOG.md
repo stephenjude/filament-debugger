@@ -2,6 +2,11 @@
 
 All notable changes to `filament-debugger` will be documented in this file.
 
+## 3.1.2 - 2024-09-25
+
+- Renamed `groupNavigation` to `navigationGroup` and deprecate the former.
+- Updated readme file.
+
 ## 3.1.1 - 2024-09-22
 
 - Fixed issue #32
