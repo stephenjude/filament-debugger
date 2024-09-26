@@ -94,7 +94,7 @@ To achive this, we need to use filament default authorization guard and your app
 protected function gate()
 {
     Gate::define('viewHorizon', function ($user) {
-        return $user->can('view.debuggers);
+        return $user->can('view.debuggers');
     });
 }
 
