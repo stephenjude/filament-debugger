@@ -86,7 +86,7 @@ $panel->plugin(
 ```
 
 ## Gates & Authorization
-When using filament debuggers (Horizon, Telescope & Pulse) in production environment, we need to make sure that they are accessible to the authorized filament admin user.
+When using filament debuggers (Horizon, Telescope & Pulse) in <ins>**production environment**</ins>, we need to make sure that they are accessible to the authorized filament admin user.
 
 To achive this, we need to use filament default authorization guard and your application defined permissions provided by overidding the `gate()` and  `authorization()` methods inside the HorizonServiceProvider,  TelescopeServiceProvider and PulseServiceProvider respectively.
 
