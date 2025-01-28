@@ -107,9 +107,6 @@ protected function authorization()
 
 ```
 
-####  Screenshots:
-
-
 ## Testing
 
 ```bash
