@@ -2,6 +2,21 @@
 
 All notable changes to `filament-debugger` will be documented in this file.
 
+## 4.0.0 - 2025-02-25
+
+### What's Changed
+
+* Support for laravel 12.x by @cednore in https://github.com/stephenjude/filament-debugger/pull/39
+* Updated ReadMe file by @alisalehi1380 in https://github.com/stephenjude/filament-debugger/pull/36
+* Bump aglipanci/laravel-pint-action from 2.4 to 2.5 by @dependabot in https://github.com/stephenjude/filament-debugger/pull/37
+
+### New Contributors
+
+* @cednore made their first contribution in https://github.com/stephenjude/filament-debugger/pull/39
+* @alisalehi1380 made their first contribution in https://github.com/stephenjude/filament-debugger/pull/36
+
+**Full Changelog**: https://github.com/stephenjude/filament-debugger/compare/3.1.3...4.0.0
+
 ## 3.1.3 - 2025-01-27
 
 - Bump dependabot/fetch-metadata from 2.2.0 to 2.3.0 in #35
