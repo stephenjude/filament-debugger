@@ -2,6 +2,15 @@
 
 All notable changes to `filament-debugger` will be documented in this file.
 
+## 4.1.0 - 2025-08-14
+
+### What's Changed
+
+* Filament v4 Support by @stephenjude in https://github.com/stephenjude/filament-debugger/pull/44
+* Bump actions/checkout from 4 to 5 by @dependabot[bot] in https://github.com/stephenjude/filament-debugger/pull/43
+
+**Full Changelog**: https://github.com/stephenjude/filament-debugger/compare/4.0.2...4.1.0
+
 ## 4.0.2 - 2025-08-14
 
 ### What's Changed
