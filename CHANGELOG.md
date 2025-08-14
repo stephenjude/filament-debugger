@@ -2,6 +2,14 @@
 
 All notable changes to `filament-debugger` will be documented in this file.
 
+## 4.0.2 - 2025-08-14
+
+### What's Changed
+
+* Bump aglipanci/laravel-pint-action from 2.5 to 2.6 by @dependabot[bot] in https://github.com/stephenjude/filament-debugger/pull/42
+
+**Full Changelog**: https://github.com/stephenjude/filament-debugger/compare/4.0.1...4.0.2
+
 ## 4.0.1 - 2025-06-16
 
 ### What's Changed
