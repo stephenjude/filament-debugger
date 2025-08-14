@@ -2,6 +2,14 @@
 
 All notable changes to `filament-debugger` will be documented in this file.
 
+## 4.1.1 - 2025-08-14
+
+### What's Changed
+
+* Clean up test workflows by @stephenjude in https://github.com/stephenjude/filament-debugger/pull/45
+
+**Full Changelog**: https://github.com/stephenjude/filament-debugger/compare/4.1.0...4.1.1
+
 ## 4.1.0 - 2025-08-14
 
 ### What's Changed
