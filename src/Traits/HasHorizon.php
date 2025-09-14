@@ -62,7 +62,7 @@ trait HasHorizon
 
     public function getHorizonUrl(): string
     {
-        return $this->horizonUrl ?? url('horizon');
+        return $this->horizonUrl ?? (Route::has('horizon.index') ? route('horizon.index') : url('horizon'));
     }
 
     public function getHorizonLabel(): string
