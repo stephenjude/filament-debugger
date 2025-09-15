@@ -57,7 +57,7 @@ trait HasTelescope
 
     public function getTelescopeUrl(): string
     {
-        return $this->telescopeUrl ?? url('telescope');
+        return $this->telescopeUrl ?? (Route::has('telescope') ? route('telescope') : url('telescope'));
     }
 
     public function getTelescopeOpenInNewTab(): bool
