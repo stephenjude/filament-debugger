@@ -2,6 +2,18 @@
 
 All notable changes to `filament-debugger` will be documented in this file.
 
+## 4.1.2 - 2025-09-15
+
+### What's Changed
+
+* Update default URLs to use named routes by @mattzuba in https://github.com/stephenjude/filament-debugger/pull/46
+
+### New Contributors
+
+* @mattzuba made their first contribution in https://github.com/stephenjude/filament-debugger/pull/46
+
+**Full Changelog**: https://github.com/stephenjude/filament-debugger/compare/4.1.1...4.1.2
+
 ## 4.1.1 - 2025-08-14
 
 ### What's Changed
