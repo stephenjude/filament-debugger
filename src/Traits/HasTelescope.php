@@ -5,6 +5,7 @@ namespace Stephenjude\FilamentDebugger\Traits;
 use Closure;
 use Filament\Navigation\NavigationItem;
 use Filament\Support\Concerns\EvaluatesClosures;
+use Illuminate\Support\Facades\Route;
 
 trait HasTelescope
 {
