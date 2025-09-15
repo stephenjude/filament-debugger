@@ -11,7 +11,7 @@ trait HasPulse
 {
     use EvaluatesClosures;
 
-    public Closure|bool $hasPulse = true;
+    public Closure | bool $hasPulse = true;
 
     public string $pulseLabel;
 
@@ -19,14 +19,14 @@ trait HasPulse
 
     public string $pulseUrl;
 
-    public Closure|bool $pulseOpenInNewTab = true;
+    public Closure | bool $pulseOpenInNewTab = true;
 
     public function pulseNavigation(
-        Closure|bool $condition = true,
+        Closure | bool $condition = true,
         string $label = 'Pulse',
         string $icon = 'heroicon-o-bolt',
         string $url = 'pulse',
-        Closure|bool $openInNewTab = true
+        Closure | bool $openInNewTab = true
     ): static {
         $this->hasPulse = $condition;
 
@@ -49,8 +49,8 @@ trait HasPulse
     private function getPulseNavigation(): NavigationItem
     {
         return NavigationItem::make()
-            ->visible(fn() => $this->hasPulse() && $this->authorized())
-            ->group(fn() => $this->hasNavigationGroup() ? $this->getNavigationGroupLabel() : null)
+            ->visible(fn () => $this->hasPulse() && $this->authorized())
+            ->group(fn () => $this->hasNavigationGroup() ? $this->getNavigationGroupLabel() : null)
             ->url(url: $this->getPulseUrl(), shouldOpenInNewTab: $this->getPulseOpenInNewTab())
             ->icon(icon: $this->getPulseIcon())
             ->label(label: $this->getPulseLabel());
