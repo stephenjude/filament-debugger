@@ -57,7 +57,7 @@ trait HasPulse
 
     public function getPulseUrl(): string
     {
-        return $this->pulseUrl ?? url('pulse');
+        return $this->pulseUrl ?? (Route::has('pulse') ? route('pulse') : url('pulse'));
     }
 
     public function getPulseOpenInNewTab(): bool
