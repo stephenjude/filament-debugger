@@ -2,6 +2,14 @@
 
 All notable changes to `filament-debugger` will be documented in this file.
 
+## 4.1.3 - 2025-09-15
+
+### What's Changed
+
+* Fixed missing route facade import by @stephenjude in https://github.com/stephenjude/filament-debugger/pull/47
+
+**Full Changelog**: https://github.com/stephenjude/filament-debugger/compare/4.1.2...4.1.3
+
 ## 4.1.2 - 2025-09-15
 
 ### What's Changed
