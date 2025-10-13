@@ -2,6 +2,14 @@
 
 All notable changes to `filament-debugger` will be documented in this file.
 
+## 4.1.4 - 2025-10-13
+
+### What's Changed
+
+* Bump stefanzweifel/git-auto-commit-action from 6 to 7 by @dependabot[bot] in https://github.com/stephenjude/filament-debugger/pull/48
+
+**Full Changelog**: https://github.com/stephenjude/filament-debugger/compare/4.1.3...4.1.4
+
 ## 4.1.3 - 2025-09-15
 
 ### What's Changed
