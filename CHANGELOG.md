@@ -2,6 +2,20 @@
 
 All notable changes to `filament-debugger` will be documented in this file.
 
+## 5.0.0 - 2026-01-22
+
+### What's Changed
+
+* Bump actions/checkout from 5 to 6 by @dependabot[bot] in https://github.com/stephenjude/filament-debugger/pull/49
+* Bump dependabot/fetch-metadata from 2.4.0 to 2.5.0 by @dependabot[bot] in https://github.com/stephenjude/filament-debugger/pull/50
+* feat: Upgrade to Filament v5 by @dbebawy in https://github.com/stephenjude/filament-debugger/pull/53
+
+### New Contributors
+
+* @dbebawy made their first contribution in https://github.com/stephenjude/filament-debugger/pull/53
+
+**Full Changelog**: https://github.com/stephenjude/filament-debugger/compare/4.1.4...5.0.0
+
 ## 4.1.4 - 2025-10-13
 
 ### What's Changed
