@@ -2,6 +2,14 @@
 
 All notable changes to `filament-debugger` will be documented in this file.
 
+## 5.1.0 - 2026-03-23
+
+### What's Changed
+
+* Add Laravel 13 support by @dbebawy in https://github.com/stephenjude/filament-debugger/pull/54
+
+**Full Changelog**: https://github.com/stephenjude/filament-debugger/compare/5.0.0...5.1.0
+
 ## 5.0.0 - 2026-01-22
 
 ### What's Changed
