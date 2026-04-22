@@ -2,6 +2,14 @@
 
 All notable changes to `filament-debugger` will be documented in this file.
 
+## 5.1.1 - 2026-04-22
+
+### What's Changed
+
+* Bump dependabot/fetch-metadata from 2.5.0 to 3.0.0 by @dependabot[bot] in https://github.com/stephenjude/filament-debugger/pull/55
+
+**Full Changelog**: https://github.com/stephenjude/filament-debugger/compare/5.1.0...5.1.1
+
 ## 5.1.0 - 2026-03-23
 
 ### What's Changed
