@@ -4,6 +4,7 @@ namespace Stephenjude\FilamentDebugger\Tests;
 
 use BladeUI\Heroicons\BladeHeroiconsServiceProvider;
 use BladeUI\Icons\BladeIconsServiceProvider;
+use Filament\Facades\Filament;
 use Filament\FilamentServiceProvider;
 use Livewire\LivewireServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
@@ -15,6 +16,8 @@ class TestCase extends Orchestra
     protected function setUp(): void
     {
         parent::setUp();
+
+        Filament::setCurrentPanel('admin');
     }
 
     protected function getPackageProviders($app)
