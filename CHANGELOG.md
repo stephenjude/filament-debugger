@@ -2,6 +2,14 @@
 
 All notable changes to `filament-debugger` will be documented in this file.
 
+## 5.1.3 - 2026-06-25
+
+### What's Changed
+
+* Bump actions/checkout from 6 to 7 by @dependabot[bot] in https://github.com/stephenjude/filament-debugger/pull/58
+
+**Full Changelog**: https://github.com/stephenjude/filament-debugger/compare/5.1.2...5.1.3
+
 ## 5.1.2 - 2026-05-31
 
 ### What's Changed
